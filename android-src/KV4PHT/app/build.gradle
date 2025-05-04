@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        rilis {
+        storeFile file('C:\\Users\\ibnux\\androidSign.jks')
+            storePassword 'qwerty'
+            keyAlias 'pocbanten'
+            keyPassword 'qwerty'
+        }
+    }
     namespace 'com.vagell.kv4pht'
     compileSdk 34
 
@@ -26,6 +34,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.rilis
         }
     }
     compileOptions {

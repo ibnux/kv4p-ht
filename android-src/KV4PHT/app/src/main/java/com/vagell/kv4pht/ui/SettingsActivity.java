@@ -113,6 +113,7 @@ public class SettingsActivity extends AppCompatActivity {
         AutoCompleteTextView min2mFreqTextView = findViewById(R.id.min2mFreqTextView);
 
         List<String> min2mFreqs = new ArrayList<String>();
+        min2mFreqs.add("134MHz");
         min2mFreqs.add("144MHz");
 
         ArrayAdapter arrayAdapter1 = new ArrayAdapter(this, R.layout.dropdown_item, min2mFreqs);
@@ -121,6 +122,7 @@ public class SettingsActivity extends AppCompatActivity {
         AutoCompleteTextView min70cmFreqTextView = findViewById(R.id.min70cmFreqTextView);
 
         List<String> min70cmFreqs = new ArrayList<String>();
+        min70cmFreqs.add("400MHz");
         min70cmFreqs.add("420MHz");
         min70cmFreqs.add("430MHz");
 
@@ -133,7 +135,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         List<String> max2mFreqs = new ArrayList<String>();
         max2mFreqs.add("148MHz");
-        max2mFreqs.add("146MHz");
+        max2mFreqs.add("174MHz");
 
         ArrayAdapter arrayAdapter1 = new ArrayAdapter(this, R.layout.dropdown_item, max2mFreqs);
         max2mFreqTextView.setAdapter(arrayAdapter1);
@@ -143,6 +145,7 @@ public class SettingsActivity extends AppCompatActivity {
         List<String> max70cmFreqs = new ArrayList<String>();
         max70cmFreqs.add("450MHz");
         max70cmFreqs.add("440MHz");
+        max70cmFreqs.add("480MHz");
 
         ArrayAdapter arrayAdapter2 = new ArrayAdapter(this, R.layout.dropdown_item, max70cmFreqs);
         max70cmFreqTextView.setAdapter(arrayAdapter2);

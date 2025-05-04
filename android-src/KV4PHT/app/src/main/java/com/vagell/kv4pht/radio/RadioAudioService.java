@@ -178,17 +178,17 @@ public class RadioAudioService extends Service {
 
     // Radio params and related settings
     private static final float VHF_MIN_FREQ = 134.0f; // SA818U lower limit, in MHz
-    private static float min2mTxFreq = 144.0f; // US 2m band lower limit, in MHz (will be overwritten by user setting)
-    private static float max2mTxFreq = 148.0f; // US 2m band upper limit, in MHz (will be overwritten by user setting)
+    private static float min2mTxFreq = 134.0f; // US 2m band lower limit, in MHz (will be overwritten by user setting)
+    private static float max2mTxFreq = 174.0f; // US 2m band upper limit, in MHz (will be overwritten by user setting)
     private static final float VHF_MAX_FREQ = 174.0f; // SA818U upper limit, in MHz
 
     private static final float UHF_MIN_FREQ = 400.0f; // SA818U lower limit, in MHz
-    private static float min70cmTxFreq = 420.0f; // US 70cm band lower limit, in MHz (will be overwritten by user setting)
-    private static float max70cmTxFreq = 450.0f; // US 70cm band upper limit, in MHz (will be overwritten by user setting)
+    private static float min70cmTxFreq = 400.0f; // US 70cm band lower limit, in MHz (will be overwritten by user setting)
+    private static float max70cmTxFreq = 480.0f; // US 70cm band upper limit, in MHz (will be overwritten by user setting)
     private static final float UHF_MAX_FREQ = 480.0f; // SA818U upper limit, in MHz (DRA818U can only go to 470MHz)
 
     private String activeFrequencyStr = null;
-    private int squelch = 0;
+    private int squelch = 3;
     private String callsign = null;
     private int consecutiveSilenceBytes = 0; // To determine when to move scan after silence
     private int activeMemoryId = -1; // -1 means we're in simplex mode
